@@ -1,0 +1,2 @@
+rootProject.name='souvenir'
+include ':app'
