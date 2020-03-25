@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">souvenir</string>
+    <string name="svn_default_name">Nom de souvenir</string>
+    <string name="svn_default_date">Date de souvenir</string>
+    <string name="svn_default_lieu">Lieu de souvenir</string>
 </resources>
