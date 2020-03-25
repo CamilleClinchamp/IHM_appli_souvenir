@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/top_margin">
+
+
+    <ImageView
+        android:id="@+id/svn_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/code_24h_image"/>
+
+    <RelativeLayout
+        android:layout_margin="@dimen/image_text_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/svn_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:text="@string/svn_default_name"/>
+        <TextView
+            android:id="@+id/svn_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/svn_default_date"
+            android:layout_below="@id/svn_name"/>
+        <TextView
+            android:id="@+id/svn_lieu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/svn_default_lieu"
+            android:layout_below="@id/svn_date"/>
+    </RelativeLayout>
+
+</LinearLayout>
