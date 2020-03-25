@@ -1,6 +1,7 @@
 package com.ensim.souvenir;
 
 import android.os.Bundle;
+import android.view.Menu;
 import android.widget.GridView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -29,5 +30,10 @@ public class MainActivity extends AppCompatActivity {
         //get Grid View
         GridView SouGridView = findViewById(R.id.sou_list_view);
         SouGridView.setAdapter(new SouvenirsEltAdapter(this,souvenirsList));
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        return true;
     }
 }
