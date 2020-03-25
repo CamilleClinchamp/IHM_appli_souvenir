@@ -4,12 +4,18 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
+import com.synnapps.carouselview.*;
 
 public class ConsultationSouvenir extends AppCompatActivity {
+
+    CarouselView carouselView;
+    int[] sampleImages = {R.drawable.pikachu, R.drawable.japan_expo, R.drawable.assa_class};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,18 +24,32 @@ public class ConsultationSouvenir extends AppCompatActivity {
 
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
+
+        carouselView = findViewById(R.id.carouselView);
+        carouselView.setPageCount(sampleImages.length);
+        carouselView.setImageListener(imageListener);
     }
+
+    ImageListener imageListener = new ImageListener() {
+        @Override
+        public void setImageForPosition(int position, ImageView imageView) {
+            imageView.setImageResource(sampleImages[position]);
+        }
+    };
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.action_settings:
-                // User chose the "Settings" item, show the app settings UI...
+            case R.id.action_modify:
+                // Renvoi à la pge de modification d'un souvenir
+                return true;
+
+            case R.id.action_delete:
+                // Suppression du souvenir
                 return true;
 
             case R.id.action_favorite:
-                // User chose the "Favorite" action, mark the current item
-                // as a favorite...
+                // Renvoi à la page des favoris
                 return true;
 
             default:
@@ -55,4 +75,11 @@ public class ConsultationSouvenir extends AppCompatActivity {
         return true;
     }
 
+    public void seeKeyWordsMemories(View v){
+        // Renvoi sur la page d'accueil avec filtres sur mots-clés
+    }
+
+    public void seeCategoryMemories(View v){
+        // Renvoi sur la page d'accueil avec filtres sur catégorie
+    }
 }

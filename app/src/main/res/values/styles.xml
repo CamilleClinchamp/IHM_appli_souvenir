@@ -11,7 +11,7 @@
     </style>
 
     <style name="MyOverflowButtonStyle" parent="Widget.AppCompat.ActionButton.Overflow">
-        <item name="android:tint">#ffffff</item>
+        <item name="tint">#ffffff</item>
     </style>
 
     <style name="ToolbarColoredBackArrow" parent="AppTheme">

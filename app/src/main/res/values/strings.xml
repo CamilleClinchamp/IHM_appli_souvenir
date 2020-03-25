@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">souvenir</string>
-    <string name="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque luctus gravida condimentum. Proin mollis ac lectus a commodo. Nam in gravida lectus. Quisque a felis dapibus, ullamcorper sem id, eleifend diam. Nunc metus eros, vehicula vel lorem vitae, facilisis rhoncus arcu. Duis sit amet convallis ante. Nam vestibulum luctus venenatis.</string>
+    <string name="consultation_souvenir_title">Mon souvenir</string>
+    <string name="consultation_souvenir_japanExpo">Japan Expo</string>
+    <string name="consultation_souvenir_date">20/06/2019</string>
+    <string name="consultation_souvenir_categorie">Manga</string>
+    <string name="consultation_souvenir_motsCles">Cosplay</string>
+    <string name="consultation_souvenir_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque luctus gravida condimentum. Proin mollis ac lectus a commodo. Nam in gravida lectus. Quisque a felis dapibus, ullamcorper sem id, eleifend diam. Nunc metus eros, vehicula vel lorem vitae, facilisis rhoncus arcu. Duis sit amet convallis ante. Nam vestibulum luctus venenatis.</string>
+
+    <string name="consultation_souvenir_iconImage">Desc</string>
 </resources>
