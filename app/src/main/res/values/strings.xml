@@ -11,4 +11,8 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
     <string name="img_descr">img_descr</string>
+    <string name="editer">Éditer</string>
+    <string name="titre">Titre</string>
+    <string name="date">Date</string>
+    <string name="lieu">Lieu</string>
 </resources>
