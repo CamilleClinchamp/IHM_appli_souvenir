@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">souvenir</string>
+    <string name="page_name">Sweet Memories</string>
+
     <string name="consultation_souvenir_title">Mon souvenir</string>
     <string name="consultation_souvenir_japanExpo">Japan Expo</string>
     <string name="consultation_souvenir_date">20/06/2019</string>
