@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">souvenir</string>
+    <string name="app_name" translatable="false">souvenir</string>
+    <string name="fav_button">Voir mes favoris</string>
 </resources>

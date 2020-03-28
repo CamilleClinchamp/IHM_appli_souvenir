@@ -4,15 +4,147 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/graySpec"
+    android:textAlignment="center"
     tools:context=".MainActivity">
 
-    <TextView
+    <Button
+        android:id="@+id/fav_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginBottom="80dp"
+        android:padding="10dp"
+        android:background="@drawable/round_button"
+        android:onClick="openFav"
+        android:text="@string/fav_button"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/info_card" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/Menu">
+        </ImageButton>
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="300dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/Edit"
+            android:onClick="openModeal"
+            >
+        </ImageButton>
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/info_card"
+        android:layout_width="360dp"
+        android:layout_height="260dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="280dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="5dp"
+        app:cardBackgroundColor="#ffffffff"
+        app:layout_constraintBottom_toTopOf="@+id/fav_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="657dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/AgeField"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/tv_border"
+                android:padding="2dp"
+                android:text="17 ans"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/SexeField"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="155dp"
+                android:layout_marginTop="25dp"
+                android:background="@color/graySpec"
+                android:padding="2dp"
+                android:text="Homme"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="282dp"
+            android:layout_marginTop="60dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/adresseField"
+                android:layout_width="200dp"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/tv_border"
+                android:padding="2dp"
+                android:text="Le Mans France" />
+
+            <TextView
+                android:id="@+id/TelField"
+                android:layout_width="200dp"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/tv_border"
+                android:padding="2dp"
+                android:text="+33 06 **** *****" />
+
+            <TextView
+                android:id="@+id/mailField"
+                android:layout_width="200dp"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/tv_border"
+                android:padding="2dp"
+                android:text="Johndoe@gmail.fr" />
+
+            <TextView
+                android:id="@+id/countsouvField"
+                android:layout_width="200dp"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/tv_border"
+                android:padding="2dp"
+                android:text="25 souvenirs enregistrés" />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
