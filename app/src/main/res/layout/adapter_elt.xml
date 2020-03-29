@@ -1,40 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginTop="@dimen/top_margin">
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="180dp"
+        android:layout_height="380dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="0dp"
+        app:cardCornerRadius="20dp">
+        <ImageView
+            android:id="@+id/svn_icon"
+            android:layout_width="170dp"
+            android:layout_height="300dp"
 
-    <ImageView
-        android:id="@+id/svn_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:src="@drawable/code_24h_image"/>
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="30dp"
+            android:contentDescription="TODO"
+            app:srcCompat="@drawable/code_24h_image"/>
 
-    <RelativeLayout
-        android:layout_margin="@dimen/image_text_margin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TextView
-            android:id="@+id/svn_name"
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="15dp"
-            android:textStyle="bold"
-            android:text="@string/svn_default_name"/>
-        <TextView
-            android:id="@+id/svn_date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/svn_default_date"
-            android:layout_below="@id/svn_name"/>
-        <TextView
-            android:id="@+id/svn_lieu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/svn_default_lieu"
-            android:layout_below="@id/svn_date"/>
-    </RelativeLayout>
+            android:layout_margin="@dimen/image_text_margin">
 
+            <TextView
+                android:id="@+id/svn_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="240dp"
+                android:layout_marginLeft="25dp"
+                android:text="@string/svn_default_name"
+                android:textSize="19dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/svn_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:textSize="16dp"
+                android:layout_below="@id/svn_name"
+                android:text="@string/svn_default_date" />
+
+            <TextView
+                android:id="@+id/svn_lieu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:textSize="16dp"
+                android:layout_below="@id/svn_date"
+                android:text="@string/svn_default_lieu"/>
+           <ImageView
+               android:id="@+id/ic_favoris_sub"
+               android:layout_width="25dp"
+               android:layout_height="25dp"
+               android:layout_marginTop="320dp"
+               android:layout_marginLeft="120dp"
+               app:srcCompat="@drawable/ic_favorite_border_black_24dp_2"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
 </LinearLayout>
