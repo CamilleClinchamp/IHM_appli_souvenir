@@ -8,7 +8,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.os.Bundle;
 
-public class Accueil extends AppCompatActivity {
+public class AccueilActivity extends AppCompatActivity {
 
     private DrawerLayout drawer;
     @Override
