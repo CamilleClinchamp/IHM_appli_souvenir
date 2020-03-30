@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@android:color/white"
+        android:background="?attr/colorPrimary">
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/ic_close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="-55dp"
+        android:layout_marginLeft="10dp"
+        app:srcCompat="@drawable/ic_close_black_24dp"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="-25dp"
+        android:text="Filtres"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_marginLeft="270dp"
+        android:layout_marginTop="-25dp"
+        android:text="Valider"
+        android:textColor="#FFFFFF"
+        android:textSize="18dp" />
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/id_filtre_date"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:text="Date"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18dp" />
+
+    <EditText
+        android:id="@+id/id_filtre_date_edit"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:inputType="date" />
+
+    <ImageView
+        android:id="@+id/ic_calendar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="270dp"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@drawable/ic_calendar"/>
+
+</RelativeLayout>
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/id_filtre_categories"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="18dp"
+        android:text="Catégories"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18dp" />
+
+    <Button
+        android:id="@+id/id_filtre_cat_art"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/button_background"
+        android:text="ART"
+        android:textColor="#FFFFFF"
+        android:textSize="14dp"
+        android:layout_below="@id/id_filtre_categories"/>
+
+    <Button
+        android:id="@+id/id_filtre_cat_cine"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/id_filtre_categories"
+        android:layout_toRightOf="@id/id_filtre_cat_art"
+        android:background="@drawable/button_background_non_choisi"
+        android:text="CINE"
+        android:textColor="#FFFFFF"
+        android:textSize="14dp" />
+
+    <Button
+        android:id="@+id/id_filtre_cat_voyage"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/button_background_non_choisi"
+        android:text="VOYAGE"
+        android:textColor="#FFFFFF"
+        android:textSize="14dp"
+        android:layout_toRightOf="@id/id_filtre_cat_cine"
+        android:layout_below="@id/id_filtre_categories"/>
+
+</RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/id_filtre_lieu"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:text="Lieu"
+            android:textColor="@android:color/background_dark"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/id_filtre_lieu_lyon"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/button_background_non_choisi"
+            android:text="LYON"
+            android:textColor="#FFFFFF"
+            android:textSize="14dp"
+            android:layout_below="@id/id_filtre_lieu"/>
+
+        <Button
+            android:id="@+id/id_filtre_lieu_nantes"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/button_background"
+            android:text="NANTES"
+            android:textColor="#FFFFFF"
+            android:textSize="14dp"
+            android:layout_toRightOf="@id/id_filtre_lieu_lyon"
+            android:layout_below="@id/id_filtre_lieu"/>
+
+        <Button
+            android:id="@+id/id_filtre_lieu_lilles"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/button_background_non_choisi"
+            android:text="LILLES"
+            android:textColor="#FFFFFF"
+            android:textSize="14dp"
+            android:layout_toRightOf="@id/id_filtre_lieu_nantes"
+            android:layout_below="@id/id_filtre_lieu"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

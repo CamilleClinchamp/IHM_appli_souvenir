@@ -6,11 +6,12 @@
         android:title="ic_menu"
         app:showAsAction="always"
         android:orderInCategory="1"/>
-    <item android:id="@+id/ic_ecrire"
+    <item
+        android:id="@+id/ic_ecrire"
         android:icon="@drawable/ic_create_black_24dp"
+        android:orderInCategory="2"
         android:title="ic_ecrire"
-        app:showAsAction="always"
-        android:orderInCategory="2"/>
+        app:showAsAction="always" />
     <item
         android:id="@+id/ic_search"
         android:icon="@drawable/ic_search_black_24dp"

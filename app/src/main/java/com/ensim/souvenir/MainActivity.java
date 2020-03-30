@@ -1,11 +1,15 @@
 package com.ensim.souvenir;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.GridView;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.ensim.souvenir.adapters.SouvenirsEltAdapter;
@@ -23,13 +27,14 @@ public class MainActivity extends AppCompatActivity {
 
         //list des souvenirs
         List<SouvenirsElt> souvenirsList = new ArrayList<>();
-        souvenirsList.add(new SouvenirsElt("pikachu","Japan Expo","20/06/2019","Le Mans"));
         souvenirsList.add(new SouvenirsElt( "code_24h","24h du Code", "12/11/2020", "Le Mans"));
+        souvenirsList.add(new SouvenirsElt("pikachu","Japan Expo","20/06/2019","Le Mans"));
         souvenirsList.add(new SouvenirsElt("poisson","Koe no Katachi","20/09/2019","Le Mans"));
         souvenirsList.add(new SouvenirsElt( "color_me_run","Color Me Run", "07/07/2019", "Paris"));
         souvenirsList.add(new SouvenirsElt( "festival_manga","Festival Manga", "03/02/2019", "Paris"));
         souvenirsList.add(new SouvenirsElt( "bord_mer","Bord de la Mer", "25/09/2019", "Paris"));
         souvenirsList.add(new SouvenirsElt("charlotte","Etoiles fillantes","01/01/2020","La Flèche"));
+
         //get Grid View
         GridView SouGridView = findViewById(R.id.sou_list_view);
         SouGridView.setAdapter(new SouvenirsEltAdapter(this,souvenirsList));
@@ -52,8 +57,7 @@ public class MainActivity extends AppCompatActivity {
                 return false;
 
             default:
-                // If we got here, the user's action was not recognized.
-                // Invoke the superclass to handle it.
+
                 return super.onOptionsItemSelected(item);
 
         }
@@ -66,5 +70,17 @@ public class MainActivity extends AppCompatActivity {
         //SearchView searchView = (SearchView) menuItem.getActionView();
         //searchView.setQueryHint("Chercher Souvenirs Ici...");
         return true;
+    }
+// Cette fonction pour afficher le dialog "filtre" lorqu'on appuye sur le bouton "filtre"
+    public void openDialogFiltre(View view){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = (LayoutInflater)this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View row = inflater.inflate(R.layout.filtre_item,null);
+
+        builder.setView(row);
+
+        AlertDialog diaglog = builder.create();
+        diaglog.show();
+
     }
 }
