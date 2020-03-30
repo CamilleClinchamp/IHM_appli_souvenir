@@ -5,15 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity"
-
-    >
-
-
+    tools:context=".RegisterActivity">
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="133dp">
+        android:layout_height="180dp">
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="15dp"
@@ -26,74 +22,70 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="CONNEXION"
+            android:textStyle="bold"
             android:textColor="@android:color/white"
             android:gravity="center"
             android:layout_gravity="center"
             android:textSize="30sp"/>
     </FrameLayout>
 
-       <com.google.android.material.textfield.TextInputLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-           android:layout_marginTop="60dp">
+        android:layout_weight="5"
+        android:orientation="vertical">
+
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/product_sans_regular"
+            android:textSize="15dp"
+            android:id="@+id/email"
             android:hint="Adresse email"
-            android:inputType="textEmailAddress"
-            />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="20dp">
+            android:inputType="textEmailAddress" />
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/mdp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:fontFamily="@font/product_sans_regular"
+            android:textSize="15dp"
+            android:layout_marginTop="20dp"
             android:hint="Mot de passe"
             android:inputType="textPassword"
-            android:layout_marginBottom="70dp"
+            android:layout_marginBottom="70dp" />
+        <Button
+            android:id="@+id/btn_login1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="105dp"
+            android:layout_marginRight="105dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/shape_btn"
+            android:text="SE CONNECTER"
+            android:textColor="@android:color/white"
             />
-    </com.google.android.material.textfield.TextInputLayout>
 
-
-    <Button
-        android:id="@+id/btn_login1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="105dp"
-        android:layout_marginRight="105dp"
-        android:layout_marginBottom="15dp"
-        android:background="@drawable/shape_btn"
-        android:text="SE CONNECTER"
-        android:textColor="@android:color/white"
-        />
-
-    <TextView
-        android:id="@+id/tvPasswordForgot"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="40dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Mot de passe oublié?"
-        android:gravity="center"
-        android:textColor="@color/colorPrimary"
-        />
-
+        <TextView
+            android:id="@+id/tvPasswordForgot"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mot de passe oublié?"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            />
 
 
         <LinearLayout
-
             android:gravity="center"
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -115,14 +107,17 @@
 
                 />
 
-       </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
 
     <ImageView
-
         android:layout_width="match_parent"
-        android:layout_height="92dp"
+        android:layout_height="0dp"
+        android:layout_gravity="bottom"
+        android:layout_weight="8"
+        android:layout_alignParentBottom="true"
         android:src="@drawable/bottom_cloud"
-
 
         />
 

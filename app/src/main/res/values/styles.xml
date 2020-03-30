@@ -1,12 +1,39 @@
 <resources>
-
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:textColorHint">@color/colorAccent</item>
+    </style>
+    <!-- TextView Style -->
+    <style name="ProductSansTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/product_sans_regular</item>
+    </style>
+
+    <!-- EditText Style -->
+    <style name="ProductSansEditTextStyle" parent="android:Widget.EditText">
+        <item name="android:fontFamily">@font/product_sans_regular</item>
+    </style>
+
+    <!-- Button style -->
+    <style name="ProductSansButtonStyle" parent="android:Widget.Button" >
+        <item name="android:fontFamily">@font/product_sans_bold</item>
+        <item name="android:background">@drawable/button_background</item>
+        <item name="android:textColor">#FFF</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <!--- Card style -->
+<!--    <style name="CartViewStyle" parent="android:Widget.Button" >-->
+<!--        <item name="android:background">@drawable/button_background</item>-->
+<!--    </style>-->
+
+    <style name="AppTheme" parent= "AppBaseTheme">
+        <item name="android:textViewStyle">@style/ProductSansTextViewStyle</item>
+        <item name="android:buttonStyle">@style/ProductSansButtonStyle</item>
+        <item name="android:editTextStyle">@style/ProductSansEditTextStyle</item>
     </style>
 
 </resources>

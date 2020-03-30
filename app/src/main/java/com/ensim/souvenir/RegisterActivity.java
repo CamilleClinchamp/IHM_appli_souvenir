@@ -9,15 +9,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
-
-
+public class RegisterActivity extends AppCompatActivity {
     private Button btn_register, btn_login;
     private EditText nom, prenom, NomDutilisateur, email, mdp;
+
+    private Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+
+        setContentView(R.layout.activity_register);
 
         btn_register = findViewById(R.id.btn_register);
         btn_login = findViewById(R.id.btn_login);
@@ -47,13 +48,11 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 openLoginPage();
             }
-
         });
     }
 
     public void openLoginPage() {
-        Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+        Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
         startActivity(intent);
     }
-
 }
