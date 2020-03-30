@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         souvenirsList.add(new SouvenirsElt( "color_me_run","Color Me Run", "07/07/2019", "Paris"));
         souvenirsList.add(new SouvenirsElt( "festival_manga","Festival Manga", "03/02/2019", "Paris"));
         souvenirsList.add(new SouvenirsElt( "bord_mer","Bord de la Mer", "25/09/2019", "Paris"));
-        souvenirsList.add(new SouvenirsElt("charlotte","Etoiles fillantes","01/01/2020","La FlÃ¨che"));
+        souvenirsList.add(new SouvenirsElt("charlotte","Etoiles fillantes","01/01/2020","La Flèche"));
 
         //get Grid View
         GridView SouGridView = findViewById(R.id.sou_list_view);
@@ -47,11 +47,11 @@ public class MainActivity extends AppCompatActivity {
                 return true;
 
             case R.id.ic_ecrire:
-                // Renvoi Ã  la page crÃ©ation un souvenirs
+                // Renvoi à la page création un souvenirs
                 return true;
 
             case R.id.ic_favoris:
-                // Renvoie Ã  la page Favoris
+                // Renvoie à la page Favoris
                 Intent myintentfavoris = new Intent(MainActivity.this, FavorisActivity.class);
                 startActivity(myintentfavoris);
                 return false;
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         //searchView.setQueryHint("Chercher Souvenirs Ici...");
         return true;
     }
-// Cette fonction pour afficher le dialog "filtre" lorqu'on appuye sur le bouton "filtre"
+    // Cette fonction pour afficher le dialog "filtre" lorqu'on appuye sur le bouton "filtre"
     public void openDialogFiltre(View view){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         LayoutInflater inflater = (LayoutInflater)this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
