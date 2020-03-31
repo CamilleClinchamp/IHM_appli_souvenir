@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FavorisActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/id_nuage"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/nuage"
+            android:padding="0dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:text="Mes Favoris"
+            android:textColor="#fff"
+            android:textSize="25dp" />
+    </RelativeLayout>
+<!--    <ImageView-->
+<!--        android:id="@+id/id_nuage2"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="550dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:srcCompat="@drawable/nuage" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/nom_page_favoris"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Mes Favoris"-->
+<!--        android:textColor="#FFFFFF"-->
+<!--        android:textSize="25dp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.498"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.022" />-->
+
+    <Button
+        android:id="@+id/button_filtre2"
+        android:layout_width="80dp"
+        android:layout_height="35dp"
+        android:background="@drawable/button_background"
+        android:text="Filtres"
+        android:textColor="#FFFFFF"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.048"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.135"
+        android:onClick="openDialogFiltre" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="1500dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10px"
+        android:paddingTop="15dp"
+        android:scrollbarSize="20px"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+            <GridView
+                android:id="@+id/sou_list_view_2"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent" android:paddingTop="115dp"
+                android:columnWidth="50dp"
+                android:gravity="center"
+                android:horizontalSpacing="4dp"
+                android:numColumns="2"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.257" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

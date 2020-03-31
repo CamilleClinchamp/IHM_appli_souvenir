@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,6 +21,8 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        getSupportActionBar().hide();
+
         btn_login1=findViewById(R.id.btn_login1);
         email=findViewById(R.id.email);
         mdp=findViewById(R.id.mdp);
@@ -29,13 +32,11 @@ public class LoginActivity extends AppCompatActivity {
            @Override
           public void onClick(View v) {
 
-               if (email.getText().toString().isEmpty() || mdp.getText().toString().isEmpty()
-                       ) {
-                   Toast.makeText(getApplicationContext(), "Veuillez remplir tous les champs", Toast.LENGTH_SHORT).show();
-               }else
-
-            {
-
+            if (email.getText().toString().isEmpty() || mdp.getText().toString().isEmpty()) {
+                Toast.makeText(getApplicationContext(), "Veuillez remplir tous les champs", Toast.LENGTH_SHORT).show();
+            } else {
+                Intent intent = new Intent(LoginActivity.this, AccueilActivity.class);
+                startActivity(intent);
             }
            }
         });
