@@ -1,0 +1,22 @@
+--- build.gradle
++++ build.gradle
+@@ -4,7 +4,6 @@ android {
+     compileSdkVersion 29
+     buildToolsVersion "29.0.2"
+ 
+-
+     defaultConfig {
+         applicationId "com.ensim.souvenir"
+         minSdkVersion 23
+@@ -32,11 +31,4 @@ dependencies {
+     testImplementation 'junit:junit:4.12'
+     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+-<<<<<<< HEAD
+-    implementation 'androidx.cardview:cardview:1.0.0'
+-=======
+-    implementation 'com.android.support:design:28.0.0'
+-
+-
+->>>>>>> c47418d7a206d1d3f8e6162ad8027eac5ffb6b1a
+ }
