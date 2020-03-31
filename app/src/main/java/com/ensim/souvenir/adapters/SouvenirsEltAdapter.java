@@ -1,6 +1,9 @@
 package com.ensim.souvenir.adapters;
 
+import android.app.Activity;
+import android.app.Fragment;
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,7 +11,13 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.cardview.widget.CardView;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+
+import com.ensim.souvenir.NavigationDrawerActivity;
 import com.ensim.souvenir.R;
+import com.ensim.souvenir.fragments.FavorisFragment;
 import com.ensim.souvenir.models.SouvenirsElt;
 
 import java.util.List;
@@ -69,6 +78,23 @@ public class SouvenirsEltAdapter extends BaseAdapter {
         //get souvenirs_lieu view
         TextView souLieuView= view.findViewById(R.id.svn_lieu);
         souLieuView.setText("à " + souLieu);
+
+        CardView cardView = view.findViewById(R.id.card_view_list);
+        cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Fragment f = ((Activity)context).getFragmentManager().findFragmentById(R.id.nav_host_fragment);
+                NavController navController = Navigation.findNavController((Activity)context, R.id.nav_host_fragment);
+
+                if(navController.getCurrentDestination().getLabel().equals("Accueil")) {
+                    navController.navigate(R.id.action_nav_home_to_nav_consultation);
+                }
+                else {
+                    navController.navigate(R.id.action_nav_favoris_to_nav_consultation);
+                }
+            }
+        });
+
         return view;
     }
 }

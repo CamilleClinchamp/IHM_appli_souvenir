@@ -15,16 +15,27 @@
             android:id="@+id/action_nav_home_to_nav_favoris"
             app:destination="@id/nav_favoris"
             app:popUpTo="@id/nav_home" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_consultation"
+            app:destination="@id/nav_consultation" />
     </fragment>
     <fragment
         android:id="@+id/nav_favoris"
         android:name="com.ensim.souvenir.fragments.FavorisFragment"
-        android:label="Favouris"
+        android:label="Favoris"
         tools:layout="@layout/fragment_favoris">
         <action
             android:id="@+id/action_HomeSecondFragment_to_HomeFragment"
             app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_nav_favoris_to_nav_consultation"
+            app:destination="@id/nav_consultation" />
     </fragment>
+    <fragment
+        android:id="@+id/nav_consultation"
+        android:name="com.ensim.souvenir.fragments.ConsultationSouvenirFragement"
+        android:label="Consultation souvenir"
+        tools:layout="@layout/fragment_consultation_souvenir"/>
 
 <!--    <fragment-->
 <!--        android:id="@+id/nav_gallery"-->
