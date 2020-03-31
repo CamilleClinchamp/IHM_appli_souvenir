@@ -34,7 +34,7 @@ public class LoginActivity extends AppCompatActivity {
             if (email.getText().toString().isEmpty() || mdp.getText().toString().isEmpty()) {
                 Toast.makeText(getApplicationContext(), "Veuillez remplir tous les champs", Toast.LENGTH_SHORT).show();
             } else {
-                Intent intent = new Intent(LoginActivity.this, AccueilFragment.class);
+                Intent intent = new Intent(LoginActivity.this, NavigationDrawerActivity.class);
                 startActivity(intent);
             }
            }
