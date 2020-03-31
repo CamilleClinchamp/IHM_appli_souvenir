@@ -1,4 +1,5 @@
 <resources>
+<<<<<<< HEAD
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -9,3 +10,53 @@
     </style>
 
 </resources>
+=======
+    <!-- Base application theme. -->
+    <style name="AppBaseTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorHint">@color/colorAccent</item>
+        <item name="actionOverflowButtonStyle">@style/MyOverflowButtonStyle</item>
+    </style>
+
+    <!-- Camille style -->
+    <style name="MyOverflowButtonStyle" parent="Widget.AppCompat.ActionButton.Overflow">
+        <item name="tint">#ffffff</item>
+    </style>
+
+    <!-- TextView Style -->
+    <style name="ProductSansTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/product_sans_regular</item>
+    </style>
+
+    <!-- EditText Style -->
+    <style name="ProductSansEditTextStyle" parent="android:Widget.EditText">
+        <item name="android:fontFamily">@font/product_sans_regular</item>
+    </style>
+
+    <!-- Button style -->
+    <style name="ProductSansButtonStyle" parent="android:Widget.Button" >
+        <item name="android:fontFamily">@font/product_sans_bold</item>
+        <item name="android:background">@drawable/button_background</item>
+        <item name="android:textColor">#FFF</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <!--- Card style -->
+<!--    <style name="CartViewStyle" parent="android:Widget.Button" >-->
+<!--        <item name="android:background">@drawable/button_background</item>-->
+<!--    </style>-->
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:textViewStyle">@style/ProductSansTextViewStyle</item>
+        <item name="android:buttonStyle">@style/ProductSansButtonStyle</item>
+        <item name="android:editTextStyle">@style/ProductSansEditTextStyle</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"></style>
+</resources>
+>>>>>>> 03c822894143983f4cc41819c20f226c644a00c9

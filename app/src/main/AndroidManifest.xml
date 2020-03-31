@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<<<<<<< HEAD
     package="com.example.myapplication">
+=======
+    package="com.ensim.souvenir">
+>>>>>>> 03c822894143983f4cc41819c20f226c644a00c9
 
     <application
         android:allowBackup="true"
@@ -9,6 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<<<<<<< HEAD
         <activity android:name=".EditionUnSouvenirValider"></activity>
         <activity android:name=".EditionUnSouvenir">
             <intent-filter>
@@ -18,6 +23,21 @@
             </intent-filter>
         </activity>
 
+=======
+        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".RegisterActivity">
+        </activity>
+        <activity android:name=".SouvenirActivity" />
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".NavigationDrawerActivity">
+
+        </activity>
+>>>>>>> 03c822894143983f4cc41819c20f226c644a00c9
     </application>
 
 </manifest>
