@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AccueilActivity">
-
+    tools:context=".fragments.FavorisFragment">
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
@@ -30,29 +29,24 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:textStyle="bold"
-            android:text="Accueil"
+            android:text="Mes Favoris"
             android:textColor="#fff"
             android:textSize="25dp" />
     </RelativeLayout>
-
 <!--    <ImageView-->
-<!--        android:id="@+id/id_nuage"-->
+<!--        android:id="@+id/id_nuage2"-->
 <!--        android:layout_width="wrap_content"-->
 <!--        android:layout_height="wrap_content"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        android:layout_marginBottom="552dp"-->
-<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        android:layout_marginBottom="550dp"-->
 <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintStart_toEndOf="parent"-->
 <!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
 <!--        app:srcCompat="@drawable/nuage" />-->
 
 <!--    <TextView-->
-<!--        android:id="@+id/textView"-->
+<!--        android:id="@+id/nom_page_favoris"-->
 <!--        android:layout_width="wrap_content"-->
 <!--        android:layout_height="wrap_content"-->
-<!--        android:text="Accueil"-->
+<!--        android:text="Mes Favoris"-->
 <!--        android:textColor="#FFFFFF"-->
 <!--        android:textSize="25dp"-->
 <!--        android:textStyle="bold"-->
@@ -64,12 +58,11 @@
 <!--        app:layout_constraintVertical_bias="0.022" />-->
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/filterBtn"
         android:layout_width="80dp"
         android:layout_height="35dp"
         android:background="@drawable/button_background"
         android:text="Filtres"
-        android:onClick="openDialogFiltre"
         android:textColor="#FFFFFF"
         android:textSize="14dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -80,32 +73,28 @@
         app:layout_constraintVertical_bias="0.135" />
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="fill_parent"
+        android:layout_height="1500dp"
         android:layout_centerInParent="true"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="10px"
         android:paddingTop="15dp"
-        android:scrollbarSize="20dp"
+        android:scrollbarSize="20px"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
-
         <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="fill_parent"
             android:orientation="vertical">
-
             <GridView
-                android:id="@+id/sou_list_view"
+                android:id="@+id/sou_list_view_2"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="fill_parent" android:paddingTop="115dp"
                 android:columnWidth="50dp"
                 android:gravity="center"
-                android:layout_margin="10dp"
-                android:horizontalSpacing="5dp"
+                android:horizontalSpacing="4dp"
                 android:numColumns="2"
-                android:paddingTop="15dp"
                 android:stretchMode="columnWidth"
-                android:verticalSpacing="5dp"
+                android:verticalSpacing="4dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"

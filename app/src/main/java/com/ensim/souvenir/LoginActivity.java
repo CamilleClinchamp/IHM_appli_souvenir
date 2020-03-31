@@ -4,12 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.ensim.souvenir.fragments.AccueilFragment;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -20,8 +21,6 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
-        getSupportActionBar().hide();
 
         btn_login1=findViewById(R.id.btn_login1);
         email=findViewById(R.id.email);
@@ -35,7 +34,7 @@ public class LoginActivity extends AppCompatActivity {
             if (email.getText().toString().isEmpty() || mdp.getText().toString().isEmpty()) {
                 Toast.makeText(getApplicationContext(), "Veuillez remplir tous les champs", Toast.LENGTH_SHORT).show();
             } else {
-                Intent intent = new Intent(LoginActivity.this, AccueilActivity.class);
+                Intent intent = new Intent(LoginActivity.this, AccueilFragment.class);
                 startActivity(intent);
             }
            }
