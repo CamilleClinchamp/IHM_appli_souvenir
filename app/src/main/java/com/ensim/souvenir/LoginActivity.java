@@ -10,7 +10,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.ensim.souvenir.fragments.AccueilFragment;
 
 public class LoginActivity extends AppCompatActivity {
 

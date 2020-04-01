@@ -22,6 +22,8 @@
         <activity android:name=".NavigationDrawerActivity">
 
         </activity>
+        <activity android:name=".HeaderActivity" />
+        <activity android:name=".ProfilActivity" />
     </application>
 
 </manifest>
