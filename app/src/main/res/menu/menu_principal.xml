@@ -14,7 +14,8 @@
         android:orderInCategory="3"
         app:actionViewClass="androidx.appcompat.widget.SearchView"/>
 
-    <item android:id="@+id/ic_favoris"
+    <item
+        android:id="@+id/ic_favoris"
         android:icon="@drawable/ic_favorite_border_black_24dp"
         android:title="icon_favoris"
         app:showAsAction="always"

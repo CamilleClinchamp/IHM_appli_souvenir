@@ -5,53 +5,84 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#E5E5E5"
-    tools:context=".Edition_des_souvenirs"
+    tools:context=".fragments.EditionSouvenirFragment"
     android:scrollbarSize="25sp"
     tools:ignore="ScrollViewCount">
 
     <!--Les commentaires ont été écris avec les balises réduites -> les commentaires sont après la balise fermante-->
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/BarreNav"
+<!--    <androidx.appcompat.widget.Toolbar-->
+<!--        android:id="@+id/BarreNav"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="53dp"-->
+<!--        android:background="@color/colorPrimary"-->
+<!--        android:minHeight="?attr/actionBarSize"-->
+<!--        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"-->
+<!--        app:popupTheme="@style/ThemeOverlay.AppCompat.ActionBar"-->
+<!--        tools:ignore="MissingConstraints"-->
+<!--        tools:layout_editor_absoluteX="0dp"-->
+<!--        tools:layout_editor_absoluteY="2dp">-->
+
+<!--    </androidx.appcompat.widget.Toolbar>  &lt;!&ndash;Barre de menu &ndash;&gt;-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView7"-->
+<!--        android:layout_width="422dp"-->
+<!--        android:layout_height="178dp"-->
+<!--        android:contentDescription="@string/img_descr"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/BarreNav"-->
+<!--        app:srcCompat="@drawable/nuage" /> &lt;!&ndash;Nuage&ndash;&gt;-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/TitrePage_Ed_Souvs"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:fadingEdge="horizontal"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textColor="#FFFFFF"-->
+<!--        android:textSize="35sp"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/BarreNav"-->
+<!--        tools:layout_editor_absoluteX="247dp" /> &lt;!&ndash;Titre de la page : affichée dans le nuage&ndash;&gt;-->
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="53dp"
-        android:background="@color/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.ActionBar"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="2dp">
-
-    </androidx.appcompat.widget.Toolbar>  <!--Barre de menu -->
-
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="422dp"
-        android:layout_height="178dp"
-        android:contentDescription="@string/img_descr"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/BarreNav"
-        app:srcCompat="@drawable/nuage" /> <!--Nuage-->
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/TitrePage_Ed_Souvs"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:fadingEdge="horizontal"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="35sp"
-        app:layout_constraintTop_toBottomOf="@+id/BarreNav"
-        tools:layout_editor_absoluteX="247dp" /> <!--Titre de la page : affichée dans le nuage-->
+        <ImageView
+            android:id="@+id/id_nuage"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/nuage"
+            android:padding="0dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:text="Edition des souvenirs"
+            android:textColor="#fff"
+            android:textSize="25dp" />
+    </RelativeLayout>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7">
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -61,8 +92,8 @@
 
             <LinearLayout
                 android:id="@+id/line_1"
-                android:layout_width="fill_parent"
-                android:layout_height="280dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"
                 android:orientation="horizontal"
@@ -72,10 +103,10 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardView_1"
                     android:layout_width="wrap_content"
-                    android:layout_height="280dp"
+                    android:layout_height="290dp"
                     android:layout_marginRight="7dp"
                     android:layout_weight="1"
-                    app:cardCornerRadius="20dp"
+                    app:cardCornerRadius="8dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/BarreNav">
 
@@ -215,12 +246,12 @@
                     <Button
                         android:id="@+id/button_1"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="245dp"
                         android:layout_marginRight="15dp"
                         android:layout_marginBottom="20dp"
-                        android:background="@drawable/button_bg_rounded_corners"
+                        android:background="@drawable/shape_btn"
                         android:text="@string/editer"
                         android:textColor="#FFFFFF" /> <!--Bouton amenant sur la page Edition d'un souvenir de ce souvenir (pour l'instant main activity)-->
 
@@ -229,10 +260,10 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardView_2"
                     android:layout_width="wrap_content"
-                    android:layout_height="280dp"
+                    android:layout_height="290dp"
                     android:layout_marginRight="7dp"
                     android:layout_weight="1"
-                    app:cardCornerRadius="20dp"
+                    app:cardCornerRadius="8dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/BarreNav">
 
@@ -369,12 +400,12 @@
                     <Button
                         android:id="@+id/button_2"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="245dp"
                         android:layout_marginRight="15dp"
                         android:layout_marginBottom="20dp"
-                        android:background="@drawable/button_bg_rounded_corners"
+                        android:background="@drawable/shape_btn"
                         android:text="@string/editer"
                         android:textColor="#FFFFFF" />
 
@@ -385,7 +416,7 @@
             <LinearLayout
                 android:id="@+id/line_2"
                 android:layout_width="fill_parent"
-                android:layout_height="280dp"
+                android:layout_height="290dp"
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="15dp"
                 android:orientation="horizontal"
@@ -397,10 +428,10 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardView_3"
                     android:layout_width="wrap_content"
-                    android:layout_height="280dp"
+                    android:layout_height="290dp"
                     android:layout_marginRight="7dp"
                     android:layout_weight="1"
-                    app:cardCornerRadius="20dp"
+                    app:cardCornerRadius="8dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/BarreNav">
 
@@ -537,12 +568,12 @@
                     <Button
                         android:id="@+id/button_3"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="245dp"
                         android:layout_marginRight="15dp"
                         android:layout_marginBottom="20dp"
-                        android:background="@drawable/button_bg_rounded_corners"
+                        android:background="@drawable/shape_btn"
                         android:text="@string/editer"
                         android:textColor="#FFFFFF" />
 
@@ -552,10 +583,10 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardView_4"
                     android:layout_width="wrap_content"
-                    android:layout_height="280dp"
+                    android:layout_height="290dp"
                     android:layout_marginRight="7dp"
                     android:layout_weight="1"
-                    app:cardCornerRadius="20dp"
+                    app:cardCornerRadius="8dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/BarreNav">
 
@@ -692,12 +723,12 @@
                     <Button
                         android:id="@+id/button_4"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="245dp"
                         android:layout_marginRight="15dp"
                         android:layout_marginBottom="20dp"
-                        android:background="@drawable/button_bg_rounded_corners"
+                        android:background="@drawable/shape_btn"
                         android:text="@string/editer"
                         android:textColor="#FFFFFF" />
 
@@ -709,7 +740,7 @@
             <LinearLayout
                 android:id="@+id/line_3"
                 android:layout_width="fill_parent"
-                android:layout_height="280dp"
+                android:layout_height="290dp"
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="15dp"
                 android:orientation="horizontal"
@@ -721,10 +752,10 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardView_5"
                     android:layout_width="wrap_content"
-                    android:layout_height="280dp"
+                    android:layout_height="290dp"
                     android:layout_marginRight="7dp"
                     android:layout_weight="1"
-                    app:cardCornerRadius="20dp"
+                    app:cardCornerRadius="8dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/BarreNav">
 
@@ -861,12 +892,12 @@
                     <Button
                         android:id="@+id/button_5"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="245dp"
                         android:layout_marginRight="15dp"
                         android:layout_marginBottom="20dp"
-                        android:background="@drawable/button_bg_rounded_corners"
+                        android:background="@drawable/shape_btn"
                         android:text="@string/editer"
                         android:textColor="#FFFFFF" />
 
@@ -875,10 +906,10 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardView_6"
                     android:layout_width="wrap_content"
-                    android:layout_height="280dp"
+                    android:layout_height="290dp"
                     android:layout_marginRight="7dp"
                     android:layout_weight="1"
-                    app:cardCornerRadius="20dp"
+                    app:cardCornerRadius="8dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/BarreNav">
 
@@ -1015,12 +1046,12 @@
                     <Button
                         android:id="@+id/button_6"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="245dp"
                         android:layout_marginRight="15dp"
                         android:layout_marginBottom="20dp"
-                        android:background="@drawable/button_bg_rounded_corners"
+                        android:background="@drawable/shape_btn"
                         android:text="@string/editer"
                         android:textColor="#FFFFFF" />
 

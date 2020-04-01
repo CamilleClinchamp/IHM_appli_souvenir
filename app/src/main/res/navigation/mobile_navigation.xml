@@ -25,6 +25,9 @@
             app:destination="@id/nav_create_souvenir"
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_edition_souvenirs"
+            app:destination="@id/nav_edition_souvenirs" />
     </fragment>
     <fragment
         android:id="@+id/nav_favoris"
@@ -47,9 +50,10 @@
         android:label="Créer un souvenir"
         tools:layout="@layout/fragment_create_souvenir" />
 
-<!--    <fragment-->
-<!--        android:id="@+id/nav_slideshow"-->
-<!--        android:name="com.ensim.navbar.ui.slideshow.SlideshowFragment"-->
-<!--        android:label="@string/menu_slideshow"-->
-<!--        tools:layout="@layout/fragment_slideshow" />-->
+    <fragment
+        android:id="@+id/nav_edition_souvenirs"
+        android:name="com.ensim.souvenir.fragments.EditionSouvenirFragment"
+        android:label="Edition souvenir"
+        tools:layout="@layout/fragment_edition_des_souvenirs" />
+
 </navigation>

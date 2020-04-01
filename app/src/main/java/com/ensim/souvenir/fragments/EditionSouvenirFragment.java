@@ -1,21 +1,22 @@
-package com.ensim.souvenir;
+package com.ensim.souvenir.fragments;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.os.Bundle;
-import android.text.Editable;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import com.ensim.souvenir.R;
 import com.google.android.material.textfield.TextInputEditText;
 
-public class Edition_des_souvenirs extends AppCompatActivity {
+public class EditionSouvenirFragment extends Fragment {
 
     String titre_page = "Edition des souvenirs";
     TextView zone_titre_page = null;
@@ -66,71 +67,76 @@ public class Edition_des_souvenirs extends AppCompatActivity {
 
 
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
         //Initialisation page
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_edition_des_souvenirs);
+        View root = inflater.inflate(R.layout.fragment_edition_des_souvenirs, container, false);
 
-        // Affichage du titre de la page : Edition des souvenirs
-        zone_titre_page = (TextView)findViewById(R.id.TitrePage_Ed_Souvs);
-        zone_titre_page.setText(titre_page);
+//        // Affichage du titre de la page : Edition des souvenirs
+//        zone_titre_page = (TextView)root.findViewById(R.id.TitrePage_Ed_Souvs);
+//        zone_titre_page.setText(titre_page);
 
         //-------------------------------------------- 1er souvenir
 
-        zone_photo_1 = (ImageView)findViewById(R.id.imageView_1);
+        zone_photo_1 = (ImageView)root.findViewById(R.id.imageView_1);
         zone_photo_1.setImageResource(photo_1);
 
-        zone_titre_1 = (TextInputEditText)findViewById(R.id.champ_titre_1);
+        zone_titre_1 = (TextInputEditText)root.findViewById(R.id.champ_titre_1);
         zone_titre_1.setText(champ_titre_1);
 
-        img_titre_1 = (ImageView)findViewById(R.id.edit_titre_1);
+        img_titre_1 = (ImageView)root.findViewById(R.id.edit_titre_1);
 
-        zone_date_1 = (TextInputEditText)findViewById(R.id.champ_date_1);
+        zone_date_1 = (TextInputEditText)root.findViewById(R.id.champ_date_1);
         zone_date_1.setText(champ_date_1);
 
-        img_date_1 = (ImageView)findViewById(R.id.edit_date_1);
+        img_date_1 = (ImageView)root.findViewById(R.id.edit_date_1);
 
-        zone_lieu_1 = (TextInputEditText)findViewById(R.id.champ_lieu_1);
+        zone_lieu_1 = (TextInputEditText)root.findViewById(R.id.champ_lieu_1);
         zone_lieu_1.setText(champ_lieu_1);
 
-        img_lieu_1 = (ImageView)findViewById(R.id.edit_lieu_1);
+        img_lieu_1 = (ImageView)root.findViewById(R.id.edit_lieu_1);
 
-        bouton_1 = (Button)findViewById(R.id.button_1);
+        bouton_1 = (Button)root.findViewById(R.id.button_1);
 
         bouton_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Edition_des_souvenirs.this, MainActivity.class)); //------------Modif lien : mettre edition d'un souvenir en destination
+                //------------Modif lien : mettre edition d'un souvenir en destination
+
+                // Edition d'un souvenir
+
+//                startActivity(new Intent(EditionSouvenirFragment.this, MainActivity.class)); //------------Modif lien : mettre edition d'un souvenir en destination
             }
         });
 
         //-------------------------------------------- 2ème souvenir
 
-        zone_photo_2 = (ImageView)findViewById(R.id.imageView_2);
+        zone_photo_2 = (ImageView)root.findViewById(R.id.imageView_2);
         zone_photo_2.setImageResource(photo_2);
 
-        zone_titre_2 = (TextInputEditText)findViewById(R.id.champ_titre_2);
+        zone_titre_2 = (TextInputEditText)root.findViewById(R.id.champ_titre_2);
         zone_titre_2.setText(champ_titre_2);
 
-        img_titre_2 = (ImageView)findViewById(R.id.edit_titre_2);
+        img_titre_2 = (ImageView)root.findViewById(R.id.edit_titre_2);
 
-        zone_date_2 = (TextInputEditText)findViewById(R.id.champ_date_2);
+        zone_date_2 = (TextInputEditText)root.findViewById(R.id.champ_date_2);
         zone_date_2.setText(champ_date_2);
 
-        img_date_2 = (ImageView)findViewById(R.id.edit_date_2);
+        img_date_2 = (ImageView)root.findViewById(R.id.edit_date_2);
 
-        zone_lieu_2 = (TextInputEditText)findViewById(R.id.champ_lieu_2);
+        zone_lieu_2 = (TextInputEditText)root.findViewById(R.id.champ_lieu_2);
         zone_lieu_2.setText(champ_lieu_2);
 
-        img_lieu_2 = (ImageView)findViewById(R.id.edit_lieu_2);
+        img_lieu_2 = (ImageView)root.findViewById(R.id.edit_lieu_2);
 
-        bouton_2 = (Button)findViewById(R.id.button_2);
+        bouton_2 = (Button)root.findViewById(R.id.button_2);
 
         bouton_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Edition_des_souvenirs.this, MainActivity.class)); //------------Modif lien : mettre edition d'un souvenir en destination
+                // Edition d'un souvenir
             }
         });
 
@@ -185,6 +191,8 @@ public class Edition_des_souvenirs extends AppCompatActivity {
             }
         });
 
+        return  root;
     }
+
 
 }

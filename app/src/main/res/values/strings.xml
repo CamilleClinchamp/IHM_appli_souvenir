@@ -13,4 +13,9 @@
     <string name="consultation_souvenir_motsCles">Cosplay</string>
     <string name="consultation_souvenir_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque luctus gravida condimentum. Proin mollis ac lectus a commodo. Nam in gravida lectus. Quisque a felis dapibus, ullamcorper sem id, eleifend diam. Nunc metus eros, vehicula vel lorem vitae, facilisis rhoncus arcu. Duis sit amet convallis ante. Nam vestibulum luctus venenatis.</string>
     <string name="consultation_souvenir_iconImage">Desc</string>
+    <string name="img_descr">img_descr</string>
+    <string name="editer">Éditer</string>
+    <string name="titre">Titre</string>
+    <string name="date">Date</string>
+    <string name="lieu">Lieu</string>
 </resources>

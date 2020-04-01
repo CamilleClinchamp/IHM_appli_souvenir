@@ -11,14 +11,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:titleTextColor="@android:color/white"
-        android:background="?attr/colorPrimary">
+        android:background="@color/colorPrimary">
     </androidx.appcompat.widget.Toolbar>
 
     <ImageView
         android:id="@+id/ic_close"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginTop="-55dp"
+        android:layout_marginTop="-44dp"
         android:layout_marginLeft="10dp"
         app:srcCompat="@drawable/ic_close_black_24dp"/>
 
@@ -26,8 +26,8 @@
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="41dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="-25dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="-30dp"
         android:text="Filtres"
         android:textColor="#FFFFFF"
         android:textSize="20dp" />
@@ -37,7 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="41dp"
         android:layout_marginLeft="270dp"
-        android:layout_marginTop="-25dp"
+        android:layout_marginTop="-40dp"
         android:text="Valider"
         android:textColor="#FFFFFF"
         android:textSize="18dp" />

@@ -1,28 +1,20 @@
 package com.ensim.souvenir;
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
-import androidx.navigation.NavDestination;
-import androidx.navigation.NavDirections;
 import androidx.navigation.Navigation;
-import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.ensim.souvenir.fragments.FavorisFragment;
 import com.google.android.material.navigation.NavigationView;
 
 public class NavigationDrawerActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener  {
@@ -34,7 +26,7 @@ public class NavigationDrawerActivity extends AppCompatActivity implements Navig
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.drawer_base);
+        setContentView(R.layout.activity_drawer_base);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -63,17 +55,16 @@ public class NavigationDrawerActivity extends AppCompatActivity implements Navig
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         switch (item.getItemId()) {
 
             case R.id.ic_ecrire:
-                // Renvoi à la page création un souvenirs
+                // Renvoi à la page édition des souvenirs
+                navController.navigate(R.id.action_nav_home_to_nav_edition_souvenirs);
                 return true;
 
             case R.id.ic_favoris:
                 // Renvoie à la page Favoris
-                NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-                // please check mobile_navigation.xml for actions, this is a sample navigation<!>
-                // check https://www.androidauthority.com/android-navigation-architecture-component-908660/
                 navController.navigate(R.id.action_nav_home_to_nav_favoris);
                 return  true;
 
