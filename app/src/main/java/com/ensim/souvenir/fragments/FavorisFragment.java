@@ -21,7 +21,7 @@ import com.ensim.souvenir.models.SouvenirsElt;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FavorisFragment extends Fragment {
+public class FavorisFragment extends Fragment  {
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -37,12 +37,13 @@ public class FavorisFragment extends Fragment {
                 openDialogFiltre();
             }
         });
+
+
         //list des souvenirs dans Favoris
         List<SouvenirsElt> souvenirsList_favoris = new ArrayList<>();
-        souvenirsList_favoris.add(new SouvenirsElt("pikachu", "Japan Expo", "20/06/2019", "Le Mans"));
-        souvenirsList_favoris.add(new SouvenirsElt("code_24h", "24h du Code", "12/11/2020", "Le Mans"));
         souvenirsList_favoris.add(new SouvenirsElt("poisson", "Koe no Katachi", "20/09/2019", "Le Mans"));
         souvenirsList_favoris.add(new SouvenirsElt("color_me_run", "Color Me Run", "07/07/2019", "Paris"));
+        souvenirsList_favoris.add(new SouvenirsElt("pikachu", "Japan Expo", "20/06/2019", "Le Mans"));
 
         //get Grid View
         GridView SouGridView_Favoris = root.findViewById(R.id.sou_list_view_2);

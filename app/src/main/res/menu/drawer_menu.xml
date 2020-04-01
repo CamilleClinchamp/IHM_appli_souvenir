@@ -22,10 +22,10 @@
 
     <item android:title="Autre">
         <menu>
-            <item
-                android:id="@+id/info"
-                android:icon="@drawable/info"
-                android:title="Info Appli" />
+<!--            <item-->
+<!--                android:id="@+id/info"-->
+<!--                android:icon="@drawable/info"-->
+<!--                android:title="Info Appli" />-->
             <item
                 android:id="@+id/deconnexion"
                 android:icon="@drawable/disconnect"

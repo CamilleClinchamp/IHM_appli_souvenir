@@ -4,7 +4,10 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -17,6 +20,8 @@ import android.widget.LinearLayout;
 import com.ensim.souvenir.R;
 import com.ensim.souvenir.adapters.SouvenirsEltAdapter;
 import com.ensim.souvenir.models.SouvenirsElt;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,6 +38,18 @@ public class AccueilFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 openDialogFiltre();
+            }
+        });
+        FloatingActionButton fab = root.findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
+                navController.navigate(R.id.action_nav_home_to_nav_create_souvenir);
+
+//                Snackbar.make(view, "", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
             }
         });
 
