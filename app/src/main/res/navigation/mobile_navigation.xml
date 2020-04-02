@@ -66,12 +66,23 @@
         android:id="@+id/nav_edition_souvenirs"
         android:name="com.ensim.souvenir.fragments.EditionSouvenirFragment"
         android:label="Edition souvenir"
-        tools:layout="@layout/fragment_edition_des_souvenirs" />
+        tools:layout="@layout/fragment_edition_des_souvenirs" >
+        <action
+            android:id="@+id/action_nav_edition_souvenirs_to_nav_edition_souvenir"
+            app:destination="@id/nav_edition_souvenir"
+            app:enterAnim="@anim/nav_default_enter_anim" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_profil"
         android:name="com.ensim.souvenir.fragments.ProfilFragment"
         android:label="Edition souvenir"
         tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/nav_edition_souvenir"
+        android:name="com.ensim.souvenir.fragments.EditionUnSouvenirFragment"
+        android:label="Edition un souvenir"
+        tools:layout="@layout/fragment_edition_un_souvenir" />
 
 </navigation>

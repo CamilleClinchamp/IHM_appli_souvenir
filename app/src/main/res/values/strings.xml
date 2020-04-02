@@ -18,4 +18,8 @@
     <string name="titre">Titre</string>
     <string name="date">Date</string>
     <string name="lieu">Lieu</string>
+    <string name="The_name">Nom: The Silence</string>
+    <string name="Category">Categorie: Film, Video</string>
+    <string name="datep">02/04/2019</string>
+    <string name="Texte">The film depicts a world under atta...</string>
 </resources>

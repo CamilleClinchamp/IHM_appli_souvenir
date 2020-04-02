@@ -3,6 +3,8 @@ package com.ensim.souvenir.fragments;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -108,6 +110,8 @@ public class EditionSouvenirFragment extends Fragment {
                 // Edition d'un souvenir
 
 //                startActivity(new Intent(EditionSouvenirFragment.this, MainActivity.class)); //------------Modif lien : mettre edition d'un souvenir en destination
+                NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
+                navController.navigate(R.id.action_nav_edition_souvenirs_to_nav_edition_souvenir);
             }
         });
 
@@ -136,7 +140,9 @@ public class EditionSouvenirFragment extends Fragment {
         bouton_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Edition d'un souvenir
+
+                NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
+                navController.navigate(R.id.action_nav_edition_souvenirs_to_nav_edition_souvenir);
             }
         });
 
