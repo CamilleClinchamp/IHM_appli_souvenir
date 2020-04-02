@@ -11,12 +11,12 @@
         <item
             android:id="@+id/nav_favoris"
             android:icon="@drawable/favoris"
-            android:title="Favoris" />
+            android:title="Mes Favoris" />
 
         <item
-            android:id="@+id/mes_souvenirs"
-            android:icon="@drawable/souvenir"
-            android:title="Mes souvenirs" />
+            android:id="@+id/nav_profil"
+            android:icon="@drawable/ic_account_circle_black_24dp"
+            android:title="Mon profil" />
 
     </group>
 

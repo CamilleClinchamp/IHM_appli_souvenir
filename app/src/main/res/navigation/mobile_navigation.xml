@@ -15,11 +15,14 @@
             android:id="@+id/action_nav_home_to_nav_favoris"
             app:destination="@id/nav_favoris"
             app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
             app:launchSingleTop="false"
             app:popUpTo="@id/nav_home" />
         <action
             android:id="@+id/action_nav_home_to_nav_consultation"
-            app:destination="@id/nav_consultation" />
+            app:destination="@id/nav_consultation"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
         <action
             android:id="@+id/action_nav_home_to_nav_create_souvenir"
             app:destination="@id/nav_create_souvenir"
@@ -27,7 +30,14 @@
             app:exitAnim="@anim/nav_default_exit_anim" />
         <action
             android:id="@+id/action_nav_home_to_nav_edition_souvenirs"
-            app:destination="@id/nav_edition_souvenirs" />
+            app:destination="@id/nav_edition_souvenirs"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_profil"
+            app:destination="@id/nav_profil"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
     </fragment>
     <fragment
         android:id="@+id/nav_favoris"
@@ -36,7 +46,9 @@
         tools:layout="@layout/fragment_favoris">
         <action
             android:id="@+id/action_nav_favoris_to_nav_consultation"
-            app:destination="@id/nav_consultation" />
+            app:destination="@id/nav_consultation"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
     </fragment>
     <fragment
         android:id="@+id/nav_consultation"
@@ -55,5 +67,11 @@
         android:name="com.ensim.souvenir.fragments.EditionSouvenirFragment"
         android:label="Edition souvenir"
         tools:layout="@layout/fragment_edition_des_souvenirs" />
+
+    <fragment
+        android:id="@+id/nav_profil"
+        android:name="com.ensim.souvenir.fragments.ProfilFragment"
+        android:label="Edition souvenir"
+        tools:layout="@layout/fragment_profile" />
 
 </navigation>
