@@ -1,2 +1,7 @@
+<<<<<<< HEAD
+include ':app'
+rootProject.name='My Application'
+=======
 rootProject.name='souvenir'
 include ':app'
+>>>>>>> 03c822894143983f4cc41819c20f226c644a00c9
